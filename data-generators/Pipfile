@@ -13,4 +13,4 @@ python_version = "3.11"
 python_full_version = "3.11.2"
 
 [scripts]
-generate = "python code/code_generator.py"
+gen_temp = "python gen_temp.py"

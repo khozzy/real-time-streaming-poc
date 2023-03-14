@@ -1,10 +1,9 @@
 import datetime
 import json
 import random
+import argparse
 
 import boto3
-
-STREAM_NAME = "stream_in"
 
 
 def get_random_data():
@@ -12,7 +11,7 @@ def get_random_data():
     if current_temperature > 160:
         status = "ERROR"
     elif current_temperature > 140 or random.randrange(1, 100) > 80:
-        status = random.choice(["WARNING","ERROR"])
+        status = random.choice(["WARNING", "ERROR"])
     else:
         status = "OK"
     return {
@@ -35,5 +34,9 @@ def send_data(stream_name, kinesis_client):
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Emits random temperature measurements to Kinesis Data Stream.')
+    parser.add_argument('stream_name', help="Kinesis Data Stream Name")
+    args = parser.parse_args()
+
     kinesis_client = boto3.client('kinesis')
-    send_data(STREAM_NAME, kinesis_client)
+    send_data(args.stream_name, kinesis_client)
