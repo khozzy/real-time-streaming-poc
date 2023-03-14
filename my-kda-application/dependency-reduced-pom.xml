@@ -73,10 +73,6 @@
           <artifactId>flink-java</artifactId>
           <groupId>org.apache.flink</groupId>
         </exclusion>
-        <exclusion>
-          <artifactId>commons-cli</artifactId>
-          <groupId>commons-cli</groupId>
-        </exclusion>
       </exclusions>
     </dependency>
     <dependency>
@@ -90,28 +86,12 @@
           <groupId>org.apache.flink</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>commons-math3</artifactId>
-          <groupId>org.apache.commons</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>flink-runtime</artifactId>
           <groupId>org.apache.flink</groupId>
         </exclusion>
         <exclusion>
           <artifactId>flink-java</artifactId>
           <groupId>org.apache.flink</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.flink</groupId>
-      <artifactId>flink-parquet</artifactId>
-      <version>1.15.2</version>
-      <scope>provided</scope>
-      <exclusions>
-        <exclusion>
-          <artifactId>protobuf-java</artifactId>
-          <groupId>com.google.protobuf</groupId>
         </exclusion>
       </exclusions>
     </dependency>

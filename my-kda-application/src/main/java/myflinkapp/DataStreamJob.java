@@ -37,7 +37,7 @@ public class DataStreamJob {
     private static final String inputStreamName = "stream_in";
     private static final String outputDeliveryStreamName = "stream_out";
 
-    private static final String s3SinkPath = "s3://khozzy-data-streaming";
+    private static final String s3SinkPath = "s3://khozzy-data-streaming/";
 
     private static DataStream<String> createSourceFromStaticConfig(StreamExecutionEnvironment env) {
         Properties inputProperties = new Properties();

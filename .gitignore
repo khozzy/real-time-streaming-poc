@@ -1,7 +1,7 @@
 .idea
 .DS_Store
 
-code/.venv
+data-generators/.venv
 
 my-kda-application/.idea
 my-kda-application/target
