@@ -1,0 +1,12 @@
+.idea
+.DS_Store
+
+code/.venv
+
+my-kda-application/.idea
+my-kda-application/target
+
+infra/*.tfstate
+infra/*.tfstate.backup
+infra/.terraform
+
